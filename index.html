@@ -67,6 +67,7 @@
         const apiUrl = 'https://bx7cyivrai.execute-api.us-east-1.amazonaws.com/prod/';
 
         async function askModel(question) {
+            console.log("askModel called");
             try {
                 const response = await fetch(apiUrl, {
                     method: 'POST',
@@ -86,6 +87,7 @@
         }
 
         function addMessage(message, isUser) {
+            console.log("addMessage called");
             const chatMessages = document.getElementById('chat-messages');
             const messageElement = document.createElement('div');
             messageElement.className = isUser ? 'message user-message' : 'message bot-message';
@@ -95,6 +97,7 @@
         }
 
         async function handleSend() {
+            console.log("handleSend called");
             const userInput = document.getElementById('user-input');
             const question = userInput.value.trim();
             if (question) {
