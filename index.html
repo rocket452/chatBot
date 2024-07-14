@@ -105,6 +105,12 @@ async function handleSend() {
         }
     }
 }
+            document.getElementById('send-button').addEventListener('click', handleSend);
+        document.getElementById('user-input').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                handleSend();
+            }
+        });
     </script>
 </body>
 </html>
