@@ -72,10 +72,12 @@
             try {
                 const response = await fetch(apiUrl, {
                     method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(""),
+    mode: 'cors',
+    credentials: 'include',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(""),
                 });
                 if (!response.ok) {
                     throw new Error(`HTTP error! status: ${response.status}`);
