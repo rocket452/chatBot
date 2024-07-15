@@ -118,7 +118,7 @@ async function handleSend() {
                 console.log("1"+response.answer);
                 console.log("2"+JSON.stringify(response));
                 // Parse the JSON string into a JavaScript object
-                const data = JSON.parse(jsonString);
+                const data = JSON.parse(response);
 
                 // Extract the answer value
                 const answer2 = data[0].answer;
