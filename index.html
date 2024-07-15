@@ -115,6 +115,10 @@ async function handleSend() {
             if (response.error) {
                 addMessage('Error: ' + response.error, false);
             } else {
+                console.log("1"+response.answer);
+                console.log("2"+JSON.stringify(response));
+               
+                
                 const answer = response.answer || JSON.stringify(response);
                 addMessage(answer, false);
             }
