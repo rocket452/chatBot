@@ -115,10 +115,10 @@ async function handleSend() {
             if (response.error) {
                 addMessage('Error: ' + response.error, false);
             } else {
-                console.log("1"+response);
+                console.log("1"+response.toString());
                 console.log("2"+JSON.stringify(response));
                 // Parse the JSON string into a JavaScript object
-                const data = JSON.parse(response);
+                const data = JSON.parse(response.toString());
 
                 // Extract the answer value
                 const answer2 = data[0].answer;
